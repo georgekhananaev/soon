@@ -91,7 +91,7 @@ export default function Waitlist() {
           ref={recaptchaRef}
           size="invisible"
           theme="dark"
-          sitekey="6LcfZyUeAAAAAN7bjLWN7woeVRHDLsVypV_InnfP"
+          sitekey="6LdlW9YlAAAAAEDX7Za9CwICFkRhFp-p5NIqVtwW"
         />
       </form>
     </div>

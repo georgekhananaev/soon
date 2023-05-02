@@ -9,17 +9,17 @@ Airtable.configure({
 const database = Airtable.base(process.env.AIRTABLE_API_BASE);
 
 function create(req, res) {
-  database('Mails').select({
+  database('tbln2CZYdM65pVX7t').select({
     filterByFormula: `{Email} = "${req.body.email}"`
   }).all(function(queryError, queryResult) {
     if (queryError) res.status(200).json({ success: false, message: "System error! Please try again later.", queryError })
     if (queryResult.length > 0) {
       res.status(200).json({ success: false, message: "Email already registered." })
     } else {
-      database('Mails').create([{
+      database('tbln2CZYdM65pVX7t').create([{
         "fields": {
           "Email": req.body.email,
-          "Active": true
+          "Active": "true"
         }
       }], function(createError, createResult) {
         if (createError) {
